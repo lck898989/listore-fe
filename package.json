@@ -1,0 +1,30 @@
+{
+  "name": "listore-fe",
+  "version": "1.0.0",
+  "description": "\"\"\u001b[Dlistore 前端\"",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^1.15.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.0",
+    "webpack": "^1.15.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lck898989/listore-fe.git"
+  },
+  "keywords": [
+    "lck8989"
+  ],
+  "author": "lck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lck898989/listore-fe/issues"
+  },
+  "homepage": "https://github.com/lck898989/listore-fe#readme"
+}
