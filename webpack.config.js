@@ -2,9 +2,10 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
 * @Last Modified by:   HP
-* @Last Modified time: 2017-10-03 21:53:09
+* @Last Modified time: 2017-10-03 22:25:08
 */
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var config = {
 	 //入口
       entry:{
@@ -24,7 +25,7 @@ var config = {
       	loaders:[
                  {
                  	test:/\.css$/,
-                 	loader:'style-loader!css-loader'
+                 	loader:ExtractTextPlugin.extract("style-loader","css-loader")
                  }
       	]
       },
@@ -34,8 +35,8 @@ var config = {
               	//找到entry中的common将其打包到js/base.js
               	name:'common',
               	filename:'js/base.js'
-              })
-              /*new ExtractTextPlugin('css/[name].css'),*/
+              }),
+              new ExtractTextPlugin('css/[name].css'),
       ]
 
 };
