@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-04 15:45:01
+ * @Last Modified time: 2017-10-04 17:35:04
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -32,12 +32,16 @@ var config = {
       entry:{
       	    'index':['./src/page/js/index.js'],
       	    'login':['./src/page/js/login.js'],
-      	    'common':['./src/page/common/index.js']
-      },
+      	    'common':['./src/page/common/index.js','webpack-dev-server/client?http://localhost:8088/']
+	  },
+	  //输出文件路径
       output:{
-      	    path:'./dist',
+		      //存放文件的路径
+			  path:'./dist',
+			  //访问文件的路径
+			  publicPath:'/dist',
       	    filename:'js/[name].js'
-      },
+	  },
       externals:{
       	//引入jquery的最佳方法（第二种引入js的方法）
       	'jquery':'window.jQuery'
