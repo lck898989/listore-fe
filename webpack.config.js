@@ -1,13 +1,23 @@
 /*
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
-* @Last Modified by:   HP
-* @Last Modified time: 2017-10-04 12:53:03
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2017-10-04 15:45:01
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 //引入html的插件
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+//获得各个页面的模板文件html-webpack-plugin参数的方法
+var getHtmlConfig = function(name){
+	return {
+		template : './src/view/' + name + '.html',
+		filename : 'view/' + name + '.html',
+		inject   : true,
+		hash     : true,//缓存的有效信息
+		chunks   : ['common',name]
+	};
+}
 /*
 （第三种引入jquery的方法）
 var providePlugin = new webpack.ProvidePlugin({
@@ -16,6 +26,7 @@ var providePlugin = new webpack.ProvidePlugin({
 	'window.jQuery':'jquery',
 	'window.$':'jquery',
 });*/
+//webpack config
 var config = {
 	 //入口
       entry:{
@@ -34,10 +45,17 @@ var config = {
       },
       module:{
       	loaders:[
+			    //处理css的加载器
                  {
                  	test:/\.css$/,
                  	loader:ExtractTextPlugin.extract("style-loader","css-loader")
-                 },
+				 },
+				 //处理图片的加载器
+				 {
+					//\??表示匹配0个或者1个？,\?*匹配0个或者多个?，\?+匹配一个或者多个?
+					 test:/\.(jpg|png|gif|jpeg|woff|svg|eot|ttf)\??.*$/,
+					 loader:'url-loader?limit=100&name=resource/[name].[ext]'
+				 }
                 /* 
                 (第三种引入jquery的方法)
                 {
@@ -58,11 +76,9 @@ var config = {
               /*new webpack.ProvidePlugin({
 									        '$$': 'jquery'
 									    }),*/ 
-			 //html模板的处理
-               new HtmlWebpackPlugin({
-					      title: 'My App',
-					      filename: 'assets/admin.html'
-					    })
+			  //html模板的处理，script插入的位置和html生成的目录位置
+			   new HtmlWebpackPlugin(getHtmlConfig('index')),
+			   new HtmlWebpackPlugin(getHtmlConfig('login'))
       ]
 
 };
