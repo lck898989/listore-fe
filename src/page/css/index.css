@@ -2,8 +2,10 @@
 * @Author: HP
 * @Date:   2017-10-03 15:40:32
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-04 15:21:25
+ * @Last Modified time: 2017-10-04 23:36:04
 */
 body{
-	background:url(../../images/luoyang.jpg);
+	background:#ccc;
+	color:red;
+	font-size: 40px;
 }

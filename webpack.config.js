@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-04 17:35:04
+ * @Last Modified time: 2017-10-04 23:27:13
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -18,6 +18,10 @@ var getHtmlConfig = function(name){
 		chunks   : ['common',name]
 	};
 }
+//获取环境变量 dev  / online 
+var WEBPACK_ENV  = process.env.WEBPACK_ENV || 'dev';
+console.log(process.env.WEBPACK_ENV);
+console.log(WEBPACK_ENV);
 /*
 （第三种引入jquery的方法）
 var providePlugin = new webpack.ProvidePlugin({
@@ -32,7 +36,7 @@ var config = {
       entry:{
       	    'index':['./src/page/js/index.js'],
       	    'login':['./src/page/js/login.js'],
-      	    'common':['./src/page/common/index.js','webpack-dev-server/client?http://localhost:8088/']
+      	    'common':['./src/page/common/index.js']
 	  },
 	  //输出文件路径
       output:{
@@ -87,3 +91,7 @@ var config = {
 
 };
 module.exports=config;
+//如果是开发模式的话在common模块中添加后面的值
+if(WEBPACK_ENV === 'dev'){
+	config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
+}
