@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-04 23:27:13
+ * @Last Modified time: 2017-10-06 11:28:32
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -50,7 +50,16 @@ var config = {
       	//引入jquery的最佳方法（第二种引入js的方法）
       	'jquery':'window.jQuery'
 
-      },
+	  },
+	  resolve:{
+		alias:{
+			util 	: __dirname + '/src/util',
+			images	: __dirname + '/src/images',
+			page 	: __dirname + '/src/page',
+			service : __dirname + '/src/service',
+			view  	: __dirname + '/src/view',
+		}
+	  },
       module:{
       	loaders:[
 			    //处理css的加载器
