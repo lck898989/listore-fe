@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-     <%=require('html-loader!./layout/html-head.html')%>
+    <head>
+            <%=require('html-loader!./layout/head-common.html')%>
+            <title>listore电商平台测试版</title>
+    </head>
+     
      <body>
-           <h1 class="first">hello world</h1></br>
-     	   <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-     	   <script type="text/javascript" src="../../dist/js/base.js"></script>
-     	   <script type="text/javascript" src="../../dist/js/index.js"></script>
-           <h3 class="second"></h3>
+     	   <%=require('html-loader!./layout/footer.html')%>
+          <div>
+              <a class="link">test</a>
+              <a class="lint-text">text</a>
+          </div>
     </body>
 </html>

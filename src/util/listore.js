@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-06 10:50:27 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-06 23:36:23
+ * @Last Modified time: 2017-10-07 22:29:46
  */
 var conf = {
     serverHost : '' 
@@ -58,17 +58,46 @@ var listore = {
       console.log('result ? decodeURIComponent(result[2]):null is ' + result ? decodeURIComponent(result[2]):null);
       return result ? decodeURIComponent(result[2]):null;
     },
-    //渲染HTML文件
+    //渲染HTML模板文件
     renderHtml:function(htmlTemplate,data){
          var template = hogan.compile(htmlTemplate);
          var result = template.render(data);
          return result;
+    },
+    //成功提示
+    successTips:function(msg){
+         alert(msg || '操作成功');
+    },
+    errorTips: function(msg){
+        alert(msg || '出错了');
+    },
+    //字段的验证:支持非空，手机，邮箱的验证
+    validate:function(value,type){
+        var value = $.trim(value);
+        //非空验证
+        if('require' ===  type){
+            return !!value;
+        }
+        //手机号验证
+        if('phone' === type){
+            //以1开头后面十位数字结尾//里面是正则表达式
+            return /^1\d{10}$/.test(value);
+        }
+        //邮箱验证
+        if('email' === type){
+            return /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/.test(value);
+        }
     },
     //调到登录页然后在返回到本页：统一登录处理
     doLogin : function(){
         //用encodeURIComponet防止特殊字符截断的情况对其进行编码
         window.location.href = '../view/login.html?redirect=' + encodeURIComponent(window.location.href);
         
+    },
+    //跳转到主页
+    goHome : function(){
+        //用encodeURIComponet防止特殊字符截断的情况对其进行编码
+        window.location.href = '../view/index.html'; 
     }
 }
 module.exports = listore;
