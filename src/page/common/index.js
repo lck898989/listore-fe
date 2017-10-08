@@ -2,6 +2,6 @@
 * @Author: HP
 * @Date:   2017-10-03 15:25:40
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-07 23:10:37
+ * @Last Modified time: 2017-10-08 23:15:01
 */
-require('./laout.css');
+require('./layout.css');
