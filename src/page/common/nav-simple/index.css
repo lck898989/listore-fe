@@ -1,0 +1,14 @@
+.nav-simple{
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+/*
+注意这里的nav-simple和.logo中间有空格存在，没有空格不正常显示
+*/
+.nav-simple .logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#c60023;
+}

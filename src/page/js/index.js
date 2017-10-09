@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 09:34:06
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-07 22:43:05
+ * @Last Modified time: 2017-10-09 22:35:14
 */
 /*document.write('it works.')
 //添加模块
@@ -11,6 +11,7 @@ document.write('hello world')*/
 //加载jquery模块
 // var $$ = require('jquery');
 require('../css/index.css');
+var $ = require('jquery');
 // var _listore = require('util/listore.js');
 // console.log("test");
 // $$(".first").html('hello json');

@@ -12,7 +12,7 @@ li{
     /*
     默认是带圆点的，这里不显示
     */
-    list-syle:none;
+    list-style: none;
 
 }
 img{
@@ -55,6 +55,7 @@ input[type='checkbox']{
     cursor:pointer;
     /*链接没有下划线*/
     text-decoration-line: none;
+    font-size: 12px;
 }
 .link:hover{
     color:#e80012;
@@ -62,6 +63,7 @@ input[type='checkbox']{
 .link-text{
     color:#999;
     text-decoration-line: none;
+    font-size: 12px;
 }
 .btn{
     /*
@@ -126,8 +128,21 @@ input[type='checkbox']{
 }
 /*loading 样式*/
 .loading{
+    /*
+    使图标居中显示:上下10像素，左右自动
+    */
+    margin: 40px auto;
+    border:1px solid #ddd;
+    border-radius: 5px;
+    background: #ffffff;
     display:block;
-    width: 500px;
-    height: 500px;
-    background: url(../../images/icon/b12799c116b1713fb2e0995c06b8d499.gif) no-repeat;
+    width: 65px;
+    height: 65px;
+    background: url(../../images/icon/5a6bac750e8a775dd2ecbe5b2673021c.gif) no-repeat;
+    /*
+    半透明效果
+   
+    opacity: .5; 
+    background: #ddd;*/
+    opacity: .9;
 }

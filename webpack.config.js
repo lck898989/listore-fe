@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-08 22:58:13
+ * @Last Modified time: 2017-10-09 22:28:11
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -53,11 +53,12 @@ var config = {
 	  },
 	  resolve:{
 		alias:{
-			util 	: __dirname + '/src/util',
-			images	: __dirname + '/src/images',
-			page 	: __dirname + '/src/page',
-			service : __dirname + '/src/service',
-			view  	: __dirname + '/src/view',
+			util 		: __dirname + '/src/util',
+			images		: __dirname + '/src/images',
+			page 		: __dirname + '/src/page',
+			service 	: __dirname + '/src/service',
+			view  		: __dirname + '/src/view',
+			node_modules: __dirname + '/node_modules'
 		}
 	  },
       module:{
