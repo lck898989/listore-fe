@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-06 10:50:27 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-09 22:30:56
+ * @Last Modified time: 2017-10-10 20:10:06
  */
 var conf = {
     serverHost : '' 
@@ -93,6 +93,10 @@ var listore = {
         //用encodeURIComponet防止特殊字符截断的情况对其进行编码
         window.location.href = '../view/login.html?redirect=' + encodeURIComponent(window.location.href);
         
+    },
+    //注册功能方法
+    register:function(){
+        window.location.href = '../view/register.html';
     },
     //跳转到主页
     goHome : function(){
