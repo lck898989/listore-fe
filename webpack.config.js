@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-09 22:28:11
+ * @Last Modified time: 2017-10-11 22:36:35
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -73,6 +73,15 @@ var config = {
 					//\??表示匹配0个或者1个？,\?*匹配0个或者多个?，\?+匹配一个或者多个?
 					 test:/\.(jpg|png|gif|jpeg|woff|svg|eot|ttf)\??.*$/,
 					 loader:'url-loader?limit=50&name=resource/[name].[ext]'
+				 },
+				 /* 
+				 处理Hogan html模板字符串
+
+				 */
+				 {
+					//\??表示匹配0个或者1个？,\?*匹配0个或者多个?，\?+匹配一个或者多个?
+					 test:/\.string$/,
+					 loader:'html-loader'
 				 }
                 /* 
                 (第三种引入jquery的方法)

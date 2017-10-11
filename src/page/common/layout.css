@@ -76,7 +76,7 @@ input[type='checkbox']{
     上下边距为0px,
     左右边距为20px
     */
-    padding:10px 40px;
+    padding:0 20px;
     height:40px;
     /*
     控制行高40px
