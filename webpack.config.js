@@ -2,17 +2,18 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-11 22:36:35
+ * @Last Modified time: 2017-10-12 21:15:26
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 //引入html的插件
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 //获得各个页面的模板文件html-webpack-plugin参数的方法
-var getHtmlConfig = function(name){
+var getHtmlConfig = function(name,title){
 	return {
 		template : './src/view/' + name + '.html',
 		filename : 'view/' + name + '.html',
+		title    : title,
 		inject   : true,
 		hash     : true,//缓存的有效信息
 		chunks   : ['common',name]
@@ -36,7 +37,8 @@ var config = {
       entry:{
       	    'index':['./src/page/js/index.js'],
       	    'login':['./src/page/js/login.js'],
-      	    'common':['./src/page/common/index.js']
+			'common':['./src/page/common/index.js'],
+			'result':['./src/page/result/index.js'],
 	  },
 	  //输出文件路径
       output:{
@@ -104,8 +106,9 @@ var config = {
 									        '$$': 'jquery'
 									    }),*/ 
 			  //html模板的处理，script插入的位置和html生成的目录位置
-			   new HtmlWebpackPlugin(getHtmlConfig('index')),
-			   new HtmlWebpackPlugin(getHtmlConfig('login'))
+			   new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+			   new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
+			   new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
       ]
 
 };
