@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-12 21:15:26
+ * @Last Modified time: 2017-10-13 22:14:21
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -12,6 +12,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var getHtmlConfig = function(name,title){
 	return {
 		template : './src/view/' + name + '.html',
+		//通过模板生成的目录位置
 		filename : 'view/' + name + '.html',
 		title    : title,
 		inject   : true,
@@ -35,10 +36,11 @@ var providePlugin = new webpack.ProvidePlugin({
 var config = {
 	 //入口
       entry:{
-      	    'index':['./src/page/js/index.js'],
-      	    'login':['./src/page/js/login.js'],
-			'common':['./src/page/common/index.js'],
-			'result':['./src/page/result/index.js'],
+      	    'index'			: ['./src/page/index/index.js'],
+      	    'user-login'	: ['./src/page/user-login/index.js'],
+      	    'user-register' : ['./src/page/user-register/index.js'],
+			'common'		: ['./src/page/common/index.js'],
+			'result'		: ['./src/page/result/index.js'],
 	  },
 	  //输出文件路径
       output:{
@@ -107,7 +109,8 @@ var config = {
 									    }),*/ 
 			  //html模板的处理，script插入的位置和html生成的目录位置
 			   new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
-			   new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
+			   new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
+			   new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
 			   new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
       ]
 

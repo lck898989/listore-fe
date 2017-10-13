@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-06 10:50:27 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-10 20:10:06
+ * @Last Modified time: 2017-10-13 13:54:13
  */
 var conf = {
     serverHost : '' 
@@ -76,6 +76,7 @@ var listore = {
         var value = $.trim(value);
         //非空验证
         if('require' ===  type){
+            //!!强制返回boolean
             return !!value;
         }
         //手机号验证
@@ -91,17 +92,17 @@ var listore = {
     //调到登录页然后在返回到本页：统一登录处理
     doLogin : function(){
         //用encodeURIComponet防止特殊字符截断的情况对其进行编码
-        window.location.href = '../view/login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
         
     },
     //注册功能方法
     register:function(){
-        window.location.href = '../view/register.html';
+        window.location.href = './register.html';
     },
     //跳转到主页
     goHome : function(){
         //用encodeURIComponet防止特殊字符截断的情况对其进行编码
-        window.location.href = '../view/index.html'; 
+        window.location.href = './index.html'; 
     }
 }
 module.exports = listore;
