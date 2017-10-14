@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 12:05:47
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-13 21:05:25
+ * @Last Modified time: 2017-10-14 12:14:41
 */
 require('./index.css');
 require('page/common/nav-simple/index.js');
@@ -41,7 +41,7 @@ var page = {
     submit:function(){
         var formData = {
             username:$.trim($('#username').val()),
-            password:$.trim($('#password').val())
+            password:$.trim($('#password').val()),
         };
         //表单验证
         validateResult = this.formValidate(formData);
@@ -49,12 +49,13 @@ var page = {
             //如果验证通过的话进行登录
             _user.login(formData,function(res){
                 window.location.href = _listore.getUrlParam('redirect') || './index.html';
+                
             },function(errMsg){
-                formError.show(errMsg);
+              formError.show(errMsg);
             });
         }else{
             //错误提示
-            formError.show(validateResult.msg);
+          formError.show(validateResult.msg);
         }
     },
     formValidate:function(formData){

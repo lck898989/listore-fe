@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 12:05:47
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-13 23:26:30
+ * @Last Modified time: 2017-10-14 09:32:13
 */
 require('./index.css');
 require('page/common/nav-simple/index.js');
@@ -27,18 +27,22 @@ var page = {
     //绑定事件
     bindEvent:function(){
         _this = this;
-        //当鼠标离开输入框时候触发
-        $('#username').blur(function(){
-            var username = $.trim($(this).val());
-            //异步验证用户名是否存在
-            _user.checkUsername(username,function(res){
-                //成功的话错误框不显示
-                formError.hide();
-            },function(errorMsg){
-                //验证不通过显示错误框
-                formError.show(errorMsg);
-            });
-        });
+                //当鼠标离开输入框时候触发
+                $('#username').blur(function(){
+                    var username = $.trim($(this).val());
+                    //如果用户名为空的话不做验证
+                    if(!username){
+                        return;
+                    }
+                    //异步验证用户名是否存在
+                    _user.checkUsername(username,function(res){
+                        //成功的话错误框不显示
+                        formError.hide();
+                    },function(errorMsg){
+                        //验证不通过显示错误框
+                        formError.show(errorMsg);
+                    });
+                });
         $('#register').click(function(){
            _this.submit();
         });
@@ -65,7 +69,7 @@ var page = {
         if(validateResult.status){
             //如果验证通过的话进行登录
             _user.register(formData,function(res){
-                window.location.href = _listore.getUrlParam('redirect') || './index.html';
+                window.location.href = './result.html?type=register';
             },function(errMsg){
                 formError.show(errMsg);
             });
