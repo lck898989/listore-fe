@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-06 10:50:27 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-15 16:00:48
+ * @Last Modified time: 2017-10-15 23:45:20
  */
 var conf = {
     serverHost : ''
@@ -20,7 +20,7 @@ var listore = {
             success     : function(res){
                 //在后端接口返回的状态值
                 if( 0 === res.status){
-                    typeof param.success === 'function' && param.success(res.data,res.msg);
+                    typeof param.success === 'function' && param.success(res);
                 }else if(10 === res.status){
                     //没有登录状态需要强制登录
                 //   _this.goHome();

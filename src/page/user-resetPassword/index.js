@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 12:05:47
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-15 23:27:44
+ * @Last Modified time: 2017-10-15 23:45:32
 */
 /*
 重设密码逻辑
@@ -49,7 +49,7 @@ var page = {
                //如果用户名不为空的话
                _user.getQuestion(username,function(res){
                     _this.data.username = username;
-                    _this.data.question = res;
+                    _this.data.question = res.msg;
                     _this.loadStepQuestion();
                },function(err){
                 formError.show(err);
