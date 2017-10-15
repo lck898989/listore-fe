@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-13 22:14:21
+ * @Last Modified time: 2017-10-15 19:56:08
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -36,11 +36,12 @@ var providePlugin = new webpack.ProvidePlugin({
 var config = {
 	 //入口
       entry:{
-      	    'index'			: ['./src/page/index/index.js'],
-      	    'user-login'	: ['./src/page/user-login/index.js'],
-      	    'user-register' : ['./src/page/user-register/index.js'],
-			'common'		: ['./src/page/common/index.js'],
-			'result'		: ['./src/page/result/index.js'],
+      	    'index'					: ['./src/page/index/index.js'],
+      	    'user-login'			: ['./src/page/user-login/index.js'],
+      	    'user-register' 		: ['./src/page/user-register/index.js'],
+      	    'user-resetPassword' 	: ['./src/page/user-resetPassword/index.js'],
+			'common'				: ['./src/page/common/index.js'],
+			'result'				: ['./src/page/result/index.js'],
 	  },
 	  //输出文件路径
       output:{
@@ -111,6 +112,7 @@ var config = {
 			   new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
 			   new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
 			   new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
+			   new HtmlWebpackPlugin(getHtmlConfig('user-resetPassword','重设密码')),
 			   new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
       ]
 

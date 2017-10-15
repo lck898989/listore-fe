@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-10 20:29:30 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-14 21:25:58
+ * @Last Modified time: 2017-10-15 22:49:29
  */
 var _listore = require('util/listore.js');
 var _user = {
@@ -56,6 +56,19 @@ var _user = {
             success     : resolve,
             error       : reject
         });
+    },
+    //获得密码提示问题
+    getQuestion(username,resolve,reject){
+        _listore.request({
+            url         : _listore.getServerUrl('/user/forget_get_question'),
+            data        : {
+              username  : username     
+            },
+            method      : 'POST',
+            success     : resolve,
+            error       : reject
+        });
+
     }
 }
 module.exports = _user;

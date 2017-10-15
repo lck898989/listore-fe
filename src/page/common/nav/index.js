@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-10 20:29:14 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-14 12:53:07
+ * @Last Modified time: 2017-10-15 11:34:08
  */
 require('./index.css');
 var _listore = require('util/listore.js');
@@ -16,8 +16,8 @@ var nav = {
     */
     init:function(){
         this.bindEvent();
-        this.loadCartCount();
         this.loadUserInfo();
+        this.loadCartCount();
         //返回它的调用者：this指代该方法的实际调用者
         return this;
     },

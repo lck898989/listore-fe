@@ -12,9 +12,9 @@ var navSide = {
           option:{
               name:'',
               navList:[
-                  {name : 'order-list'    ,  desc:'我的订单'    ,href   : './order-list.html'},
+                  {name : 'order-list'    ,  desc:'我的订单'    ,href    : './order-list.html'},
                   {name : 'about-listore' ,  desc:'关于listore' ,href   : './about-listore.html'},
-                  {name : 'user-center'   ,  desc:'个人中心'    , href    : './user-center.html'},
+                  {name : 'user-center'   ,  desc:'个人中心'    , href  : './user-center.html'},
               ]
           },
           init:function(option){
