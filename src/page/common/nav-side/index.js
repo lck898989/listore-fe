@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-11 21:42:37 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-11 23:24:11
+ * @Last Modified time: 2017-10-17 23:36:50
  */
 require('./index.css');
 var _listore = require('util/listore.js');
@@ -12,9 +12,10 @@ var navSide = {
           option:{
               name:'',
               navList:[
-                  {name : 'order-list'    ,  desc:'我的订单'    ,href    : './order-list.html'},
-                  {name : 'about-listore' ,  desc:'关于listore' ,href   : './about-listore.html'},
-                  {name : 'user-center'   ,  desc:'个人中心'    , href  : './user-center.html'},
+                  {name : 'order-list'    ,  desc:'我的订单'       ,  href    : './order-list.html'},
+                  {name : 'about-listore' ,  desc:'关于listore'    ,  href   : './about-listore.html'},
+                  {name : 'user-center'   ,  desc:'个人中心'        ,   href  : './user-center.html'},
+                  {name : 'user-update'   ,  desc:'修改个人用户密码' , href   :  './user-center-update.html'}
               ]
           },
           init:function(option){

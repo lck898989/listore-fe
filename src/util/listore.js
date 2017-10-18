@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-06 10:50:27 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-15 23:45:20
+ * @Last Modified time: 2017-10-18 22:49:21
  */
 var conf = {
     serverHost : ''
@@ -47,15 +47,15 @@ var listore = {
       //这里substr(1)是将？去掉
       console.log('reg is ' + reg);
       var result = window.location.search.substr(1).match(reg);
-      console.log('the length of result is ' + result.length);
-      //第一个存储者这个数组的全部内容
-      console.log('result[0] is ' + result[0]);
-      //第二个存储的是在正则表达式出现的第一个括号的内容
-      console.log('result[1] is' + result[1]);
-      console.log('result[2] is' + result[2]);
-      console.log('result[3] is' + result[3]);
-      console.log('result is ' + result);
-      console.log('result ? decodeURIComponent(result[2]):null is ' + result ? decodeURIComponent(result[2]):null);
+    //   console.log('the length of result is ' + result.length);
+    //   //第一个存储者这个数组的全部内容
+    //   console.log('result[0] is ' + result[0]);
+    //   //第二个存储的是在正则表达式出现的第一个括号的内容
+    //   console.log('result[1] is' + result[1]);
+    //   console.log('result[2] is' + result[2]);
+    //   console.log('result[3] is' + result[3]);
+    //   console.log('result is ' + result);
+    //   console.log('result ? decodeURIComponent(result[2]):null is ' + result ? decodeURIComponent(result[2]):null);
       return result ? decodeURIComponent(result[2]):null;
     },
     //渲染HTML模板文件

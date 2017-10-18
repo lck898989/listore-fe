@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-10 20:29:14 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-15 11:34:08
+ * @Last Modified time: 2017-10-16 21:23:08
  */
 require('./index.css');
 var _listore = require('util/listore.js');
@@ -45,7 +45,7 @@ var nav = {
         _user.checkLogin(function(res){
             //如果为登录状态的时候隐藏掉相关属性
             $('.user.not-login').hide().siblings('.user.login').show()
-            .find('.username').text(res.username);
+            .find('.username').text(res.data.username);
         },function(errMsg){
             
         });
@@ -56,7 +56,7 @@ var nav = {
         //获得购物车中的商品数量
         _cart.getCartCount(function(res){
             //获取后端返回回来的信息进行更新浏览器中的内容
-            $('.nav .cart-count').text(res || 0);
+            $('.nav .cart-count').text(res.data || 0);
         },function(errMsg){
             //出错的话赋值为0
             $('.nav .cart-count').text(0);

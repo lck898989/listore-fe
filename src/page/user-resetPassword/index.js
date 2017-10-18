@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 12:05:47
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-15 23:45:32
+ * @Last Modified time: 2017-10-17 21:46:33
 */
 /*
 重设密码逻辑
@@ -30,6 +30,7 @@ var page = {
         question    : '',
         answer      : '',
         token       : '',
+        newPassword : ''
     },
     init:function(){
         //显示第一步输入用户名的操作
@@ -58,7 +59,48 @@ var page = {
                formError.show('用户名为空');
            }
         });
-        
+        //输入问题提示答案之后单击下一步
+        $('#submit-question').click(function(){
+            //当提交问题答案的时候进行逻辑处理把提交问题答案接收过来
+            var answer = $.trim($('#answer').val());
+            if(answer){
+                //如果用户名不为空的话:这时候useranme ,question ,answer都有了
+                _this.data.answer = answer;
+                var userInfo = _this.data
+                _user.checkAnswer(userInfo,function(res){
+                     //如果密码验证通过的话下一步是存储token值
+                     _this.data.token = res.data;
+                     //然后加载输入新密码的页面
+                     _this.loadStepPassword();
+                },function(err){
+                 formError.show(err);
+                });
+            }else{
+                formError.show('问题提示答案为空');
+            }
+         });
+         //输入新密码之后单击下一步
+         $('#submit-password').click(function(){
+            //提取当前输入的新密码值
+            var newPassword = $.trim($('#newPassword').val());
+            if(newPassword){
+                _this.data.newPassword = newPassword;
+                var userInfo = _this.data;
+                //跟新密码
+                _user.resetPassword(userInfo,function(res){
+                        //如果更新密码成功的话,返回结果页面
+                        window.location.href = './result.html?type=resetPassword';
+                },function(err){
+
+                });
+            }else{
+                formError.show('新密码为空');
+            }
+         });
+         //当点击返回登录按钮时候
+         $('.return-login').click(function(){
+             _listore.doLogin();
+         })
     },
     //加载第一步的操作获取用户名
     loadStepUsername:function(){
@@ -75,7 +117,9 @@ var page = {
     },
     //加载第三步的输入新密码
     loadStepPassword:function(){
-
+        formError.hide();
+        $('.step-question').hide().siblings('.step-password')
+                           .show();
     },
    
 };

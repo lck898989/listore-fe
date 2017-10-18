@@ -1,0 +1,23 @@
+<div class="form-line">
+    <span class="label username">用户名:</span>
+        <span class="text">xxx</span>
+</div>
+<div class="form-line">
+    <span class="label phone">电 话:</span>
+        <span class="text">xxx</span>
+</div>
+<div class="form-line">
+    <span class="label email">邮 箱:</span>
+        <span class="text">xxx</span>
+</div>
+<div class="form-line">
+    <span class="label question">问 题:</span>
+        <span class="text">xxx</span>
+</div>
+<div class="form-line">
+    <span class="label answer">答 案:</span>
+        <span class="text">xxx</span>
+</div>
+<div class="form-line">
+    <a href="" class="btn btn-submit">编辑</a>
+</div>

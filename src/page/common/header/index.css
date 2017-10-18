@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-11 11:48:40 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-11 19:44:09
+ * @Last Modified time: 2017-10-17 23:24:39
  */
 /*
 通用头部导航
@@ -19,6 +19,7 @@
     left:50px;
     top:33px;
     font-weight: bold;
+    text-decoration: none;
 }
 .header .search{
     padding:40px 0 40px 250px;
