@@ -1,23 +1,23 @@
 <div class="form-line">
     <span class="label username">用户名:</span>
-        <span class="text">xxx</span>
+    <span class="text">{{username}}</span>
 </div>
 <div class="form-line">
     <span class="label phone">电 话:</span>
-        <span class="text">xxx</span>
+    <input class="input" id="phone" type="text" value="{{phone}}"/>
 </div>
 <div class="form-line">
     <span class="label email">邮 箱:</span>
-        <span class="text">xxx</span>
+    <input type="text" class="input" id="email" value="{{email}}"/>
 </div>
 <div class="form-line">
     <span class="label question">问 题:</span>
-        <span class="text">xxx</span>
+    <input type="text" class="input" id="question" value="{{question}}"/>
 </div>
 <div class="form-line">
     <span class="label answer">答 案:</span>
-        <span class="text">xxx</span>
+    <input type="text" class="input" id="answer" value="{{answer}}"/>
 </div>
 <div class="form-line">
-    <a href="" class="btn btn-submit">编辑</a>
+    <a class="btn btn-submit">修改</a>
 </div>

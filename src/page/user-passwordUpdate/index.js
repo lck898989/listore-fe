@@ -3,7 +3,6 @@ require('page/common/nav-simple/index.js');
 var _user = require('service/userService.js');
 var _listore = require('util/listore.js');
 var navSide = require('page/common/nav-side/index.js');
-var templateHtml = require('./index.string');
 //加载用户信息
 var page = {
     init : function(){
@@ -11,14 +10,14 @@ var page = {
         this.bindEvent();
     },
     onLoad : function(){
-        navSide.init();
+        navSide.init({
+            name : 'user-passwordUpdate'
+        });
         this.loadUserInfo();
     },
     loadUserInfo : function(){
         _user.getUserInfo(function(res){
-            //如果用户登录成功的话渲染html
-            var userHtml = _listore.renderHtml(templateHtml,res.data);
-            $('.panel-body').html(userHtml);
+
         },function(errMsg){
             _listore.errorTips(errMsg);
         })
@@ -29,19 +28,15 @@ var page = {
         $(document).on('click','.btn-submit',function(){
             
             //收集用户信息
-            var userInfo = {
-                phone       : $.trim($('#phone').val()),
-                email       : $.trim($('#email').val()),
-                question    : $.trim($('#question').val()),
-                answer      : $.trim($('#answer').val()),
-
+            var passwordInfo = {
+                passwordOld        : $.trim($('#oldPass').val()),
+                passwordNew        : $.trim($('#newPass').val()),
+                passwordConfirm    : $.trim($('#newPassConf').val()),
             };
-            validateResult = _this.validateResult(userInfo);
+            validateResult = _this.validateResult(passwordInfo);
             if(validateResult.status){
-                _user.updateUserInfo(userInfo,function(res){
-                    _listore.successTips(res.msg);
-                    window.location.href = './user-center.html';
-
+                _user.updatePassword(passwordInfo,function(res){
+                    window.location.href = './result.html?type=resetPassword';
                 },function(err){
                     _listore.errorTips(err);
                 });
@@ -56,20 +51,24 @@ var page = {
             status:false,
             msg   :''
         };
-        if(!_listore.validate(formData.phone,'phone')){
-            result.msg = '手机号格式不正确';
+        //验证原密码是否为空
+        if(!_listore.validate(formData.passwordOld,'require')){
+            result.msg = '旧密码不能为空';
             return result;
         }
-        if(!_listore.validate(formData.email,'email')){
-            result.msg = '邮箱格式不正确';
+        //验证新密码是否为空
+        if(!_listore.validate(formData.passwordNew,'require')){
+            result.msg = '新密码不能为空';
             return result;
         }
-        if(!_listore.validate(formData.question,'require')){
-            result.msg = '提示问题不能为空';
+        //验证新密码的长度是否大于6
+        if(formData.passwordNew.length < 6){
+            result.msg = '密码的长度不能小于六位';
             return result;
         }
-        if(!_listore.validate(formData.answer,'require')){
-            result.msg = '提示问题答案不能为空';
+        //验证确认密码是否和新密码相同
+        if(formData.passwordNew !== formData.passwordConfirm){
+            result.msg = '两次输入的密码不一致';
             return result;
         }
         result.status = true;

@@ -25,8 +25,8 @@
     overflow: hidden;
 }
 .form-line{
-    padding:10px;
-    margin-top: 5px;
+    padding:0px;
+    margin-top: 15px;
     height:30px;
     line-height: 30px;
     font-size:14px;
@@ -34,7 +34,7 @@
 .form-line .label{
     /*sapn默认是没有宽度的*/
     display: inline-block;
-    width: 60px;
+    width: 100px;
     text-align: center;
     background:#eee;
 }
@@ -50,11 +50,13 @@
 .item{
     padding-right: 10px;
 }
-.userInfo{
-    text-align: center;
+.passwordInfo{
+    margin:auto;
 }
 .btn-submit{
-    width:100px;
+    display: inline-block;
+    width:80px;
     text-align: center;
-    margin:0 auto;
+    font-size: 14px;
+    margin-top: 10px;
 }

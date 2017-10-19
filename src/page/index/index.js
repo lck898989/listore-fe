@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 09:34:06
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-13 11:32:53
+ * @Last Modified time: 2017-10-19 20:55:32
 */
 /*document.write('it works.')
 //添加模块
@@ -12,6 +12,14 @@ document.write('hello world')*/
 // var $$ = require('jquery');
 require('./index.css');
 var $ = require('jquery');
+require('node_modules/font-awesome/css/font-awesome.min.css');
+require('page/common/nav-simple/index.js');
+require('page/common/nav/index.js');
+require('page/common/header/index.js');
+var navSide = require('page/common/nav-side/index.js');
+navSide.init({
+    name : 'user-center'
+})
 // var _listore = require('util/listore.js');
 // console.log("test");
 // $$(".first").html('hello json');

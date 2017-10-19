@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-10 20:29:30 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-18 22:39:11
+ * @Last Modified time: 2017-10-19 15:27:40
  */
 var _listore = require('util/listore.js');
 var _user = {
@@ -103,6 +103,35 @@ var _user = {
             error       : reject
         });
         
+    },
+    //更新用户信息
+    updateUserInfo : function(newUser,resolve,reject){
+        _listore.request({
+            url             : _listore.getServerUrl('/user/update_userInfo'),
+            data            : {
+                phone       : newUser.phone,
+                email       : newUser.email,
+                question    : newUser.question,
+                answer      : newUser.answer 
+            },
+            method          : 'POST',
+            success         : resolve,
+            error           : reject
+        });
+    },
+    //用户修改密码
+    updatePassword : function(passwordInfo,resolve,reject){
+        _listore.request({
+            url             : _listore.getServerUrl('/user/reset_password'),
+            data            : {
+                passwordOld : passwordInfo.passwordOld,
+                passwordNew : passwordInfo.passwordNew
+            },
+            method          : 'POST',
+            success         : resolve,
+            error           : reject
+        });
+
     }
 }
 module.exports = _user;

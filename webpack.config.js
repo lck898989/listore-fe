@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-17 22:56:41
+ * @Last Modified time: 2017-10-19 19:43:48
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -41,7 +41,7 @@ var config = {
       	    'user-register' 		: ['./src/page/user-register/index.js'],
       	    'user-resetPassword' 	: ['./src/page/user-resetPassword/index.js'],
       	    'user-center' 			: ['./src/page/user-center/index.js'],
-      	    'user-center-update' 	: ['./src/page/user-center-update/index.js'],
+      	    'user-passwordUpdate' 	: ['./src/page/user-passwordUpdate/index.js'],
 			'common'				: ['./src/page/common/index.js'],
 			'result'				: ['./src/page/result/index.js'],
 	  },
@@ -115,8 +115,9 @@ var config = {
 			   new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
 			   new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
 			   new HtmlWebpackPlugin(getHtmlConfig('user-resetPassword','重设密码')),
+			   new HtmlWebpackPlugin(getHtmlConfig('user-passwordUpdate','修改密码')),
 			   new HtmlWebpackPlugin(getHtmlConfig('user-center','个人中心')),
-			   new HtmlWebpackPlugin(getHtmlConfig('user-center-update','修改个人信息')),
+			   new HtmlWebpackPlugin(getHtmlConfig('user-centerUpdate','修改个人信息')),
 			   new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
       ]
 

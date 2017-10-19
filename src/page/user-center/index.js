@@ -18,7 +18,7 @@ var page = {
     },
     loadUserInfo : function(){
         _user.getUserInfo(function(res){
-            userHtml = _listore.renderHtml(templateIndex,res.data);
+           var userHtml = _listore.renderHtml(templateIndex,res.data);
             $('.userInfo').html(userHtml);
         },function(errMsg){
            _listore.errorTips(errMsg);
