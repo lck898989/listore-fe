@@ -13,18 +13,10 @@ var page = {
         navSide.init({
             name : 'user-passwordUpdate'
         });
-        this.loadUserInfo();
-    },
-    loadUserInfo : function(){
-        _user.getUserInfo(function(res){
-
-        },function(errMsg){
-            _listore.errorTips(errMsg);
-        })
     },
     bindEvent : function(){
         var _this = this;
-        //事件冒泡,on事件代理
+        //事件冒泡,on事件代理任何点击都会冒泡到document对象上委托document进行处理
         $(document).on('click','.btn-submit',function(){
             
             //收集用户信息
@@ -36,6 +28,7 @@ var page = {
             validateResult = _this.validateResult(passwordInfo);
             if(validateResult.status){
                 _user.updatePassword(passwordInfo,function(res){
+                    _listore.successTips(res.msg);
                     window.location.href = './result.html?type=resetPassword';
                 },function(err){
                     _listore.errorTips(err);

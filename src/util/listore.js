@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-06 10:50:27 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-19 19:18:02
+ * @Last Modified time: 2017-10-20 11:54:18
  */
 var conf = {
     serverHost : ''
@@ -22,7 +22,10 @@ var listore = {
                 if( 0 === res.status){
                     typeof param.success === 'function' && param.success(res);
                 }else if(10 === res.status){
+                    alert(res.msg);
                     //没有登录状态需要强制登录
+                    _this.doLogin();
+
                 //   _this.goHome();
                 }else if(1 === res.status){
                     typeof param.error === 'function' && param.error(res.msg);

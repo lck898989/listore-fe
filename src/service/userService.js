@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-10 20:29:30 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-19 15:27:40
+ * @Last Modified time: 2017-10-20 11:42:09
  */
 var _listore = require('util/listore.js');
 var _user = {
@@ -28,7 +28,7 @@ var _user = {
     //检查登录状态
     checkLogin:function(resolve,reject){
         _listore.request({
-            url         : _listore.getServerUrl('/user/get_User_Info'),
+            url         : _listore.getServerUrl('/user/getUserInfo'),
             method      : 'POST',
             success     : resolve,
             error       : reject

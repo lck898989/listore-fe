@@ -37,15 +37,17 @@
     width: 60px;
     text-align: center;
     background:#eee;
+    border:1px solid grey;
 }
 .form-line .input{
     position: absolute;
     width: 200px;
-    height: 26px;
-    line-height: 26px;
+    height: 30px;
+    line-height: 30px;
     font-size: 14px;
     outline: none;
-    border:2px solid grey;
+    border:1px solid grey;
+    padding:0 5px;
 }
 .item{
     padding-right: 10px;

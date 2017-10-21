@@ -19,5 +19,5 @@
         <span class="text">{{answer}}</span>
 </div>
 <div class="form-line">
-    <a href="./user-center-update.html" class="btn btn-submit">编辑</a>
+    <a href="./user-centerUpdate.html" class="btn btn-submit">编辑</a>
 </div>

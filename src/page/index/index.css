@@ -1,3 +1,112 @@
 body{
     background: #eee;
 }
+.keywords-list{
+    background:#777;
+    float:left;
+    width: 240px;
+    height: 450px;
+    padding:10px 0;
+    margin-right: 10px;
+}
+.keywords-list .keywords-item{
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+}
+.keywords-list .keywords-item:hover{
+    background: #999;
+}
+.keywords-list .keywords-item .link{
+    color:#fff;
+    margin-left: 8px;
+}
+.keywords-list .keywords-item .link:hover{
+    color:#c60023;
+}
+.banner-con{
+    background: #999;
+    width:830px;
+    float: right;
+    height: 470px;
+}
+.banner-con .loading{
+    margin-top: 250px;
+}
+
+/*floor 样式*/
+.floor-wrap .floor-title{
+    height:50px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: normal;
+    
+}
+.floor-wrap:nth-child(1) .floor-title{
+    color:#c60023;
+    border-bottom: 1px solid #c60023;
+}
+.floor-wrap:nth-child(2) .floor-title{
+    color:#a83498;
+    border-bottom: 1px solid #a83498;
+}
+.floor-wrap:nth-child(3) .floor-title{
+    color:#d78980;
+    border-bottom: 1px solid #d78980;
+}
+.floor-wrap:nth-child(4) .floor-title{
+    color:#683498;
+    border-bottom: 1px solid #683498;
+}
+.floor-wrap:nth-child(5) .floor-title{
+    color:#183498;
+    border-bottom: 1px solid #183498;
+}
+/*
+标签ul是普通流而li是被置为了浮动流它的内容为空所以没有高度
+*/
+.floor-wrap .floor-list{
+    margin-right: -20px;
+    overflow: hidden;
+}
+.floor-wrap .floor-item{
+    position:relative;
+    width:200px;
+    height:220px;
+    margin:15px 20px 15px 0;
+    float:left;
+    cursor: pointer;
+    background: #fff;
+}
+.floor-wrap .floor-item:hover{
+    /*
+    box-shadow:h-shadow v-shadow blur spread color inset;
+    h-shadow:水平阴影的位置允许负值
+    v-shadow:垂直阴影的位置允许负值
+    blur:可选模糊的距离
+    spread:可选阴影的尺寸
+    color:可选阴影的颜色
+    inset:可选，将外部阴影（outset）改为内部阴影
+    */
+    box-shadow: 1px 1px 20px #d78980;
+}
+/*
+让文字处于左上角
+*/
+.floor-wrap .floor-item .floor-text{
+    position: absolute;
+    font-size: 14px;
+    top:10px;
+    left: 10px;
+}
+/*
+改变图片的大小
+*/
+.floor-wrap .floor-item .floor-img{
+    position: absolute;
+    height: 170px;
+    bottom: 10px;
+    right: 5px;
+    width: 80%;
+}

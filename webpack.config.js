@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-19 19:43:48
+ * @Last Modified time: 2017-10-20 12:08:31
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -41,6 +41,7 @@ var config = {
       	    'user-register' 		: ['./src/page/user-register/index.js'],
       	    'user-resetPassword' 	: ['./src/page/user-resetPassword/index.js'],
       	    'user-center' 			: ['./src/page/user-center/index.js'],
+      	    'user-centerUpdate' 	: ['./src/page/user-center-update/index.js'],
       	    'user-passwordUpdate' 	: ['./src/page/user-passwordUpdate/index.js'],
 			'common'				: ['./src/page/common/index.js'],
 			'result'				: ['./src/page/result/index.js'],

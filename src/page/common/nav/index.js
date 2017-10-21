@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2017-10-10 20:29:14 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-16 21:23:08
+ * @Last Modified time: 2017-10-20 11:47:05
  */
 require('./index.css');
 var _listore = require('util/listore.js');
@@ -47,7 +47,7 @@ var nav = {
             $('.user.not-login').hide().siblings('.user.login').show()
             .find('.username').text(res.data.username);
         },function(errMsg){
-            
+            //没有登录状态的话让用户自己选择登录不强制登录
         });
 
     },

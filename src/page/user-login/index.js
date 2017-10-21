@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 12:05:47
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-14 12:14:41
+ * @Last Modified time: 2017-10-19 23:12:16
 */
 require('./index.css');
 require('page/common/nav-simple/index.js');
@@ -27,7 +27,8 @@ var page = {
     //绑定事件
     bindEvent:function(){
         _this = this;
-        $('#login').click(function(){
+        $('#login').click(function(e){
+            console.log(e.target.tagName + 'is clicked');
            _this.submit();
         });
         //如果按下回车也进行提交操作
@@ -49,7 +50,6 @@ var page = {
             //如果验证通过的话进行登录
             _user.login(formData,function(res){
                 window.location.href = _listore.getUrlParam('redirect') || './index.html';
-                
             },function(errMsg){
               formError.show(errMsg);
             });
