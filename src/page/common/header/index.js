@@ -4,6 +4,7 @@ var header = {
     init:function(){
         //绑定特定的事件
         this.bindEvent();
+        this.onLoad();
     },
     //查看搜索栏中有没有值有的话填上
     onLoad:function(){

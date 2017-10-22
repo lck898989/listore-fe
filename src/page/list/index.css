@@ -1,0 +1,39 @@
+.sort-con {
+    overflow: auto;
+}
+.sort-con .sort-item{
+    position: relative;
+    float:left;
+    margin-right: 10px;
+    font-size:14px;
+    bsort:1px solid #cccccc;
+    padding:0 10px;
+    width  : 80px;
+    height : 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    color:#444;
+}
+.sort-con .sort-item.active{
+    background: #c60023;
+    color:#fff;
+}
+.sort-con .price-sort .fa-sort-asc{
+    position: relative;
+    margin-left: 10px;
+    cursor:pointer;
+}
+.sort-con .price-sort .fa-sort-desc{
+    position: absolute;
+    top:10px;
+    right:13px;
+    cursor: pointer;
+}
+.sort-con .sort-item.asc .fa-sort-desc{
+    opacity: .6;
+}
+.sort-con .sort-item.desc .fa-sort-asc{
+    opacity: .6;
+}
