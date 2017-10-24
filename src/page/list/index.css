@@ -1,5 +1,6 @@
 .sort-con {
     overflow: auto;
+    border-bottom: 1px solid #ccc;
 }
 .sort-con .sort-item{
     position: relative;
@@ -15,6 +16,7 @@
     cursor: pointer;
     background: #fff;
     color:#444;
+    user-select: none;
 }
 .sort-con .sort-item.active{
     background: #c60023;
@@ -36,4 +38,45 @@
 }
 .sort-con .sort-item.desc .fa-sort-asc{
     opacity: .6;
+}
+/*产品列表的样式*/
+.list-con{
+    margin-top: 15px;
+    margin-right: -20px;
+    overflow: hidden;
+}
+.list-con .p-list-item .p-link .p-image{
+    height: 200px;
+    width:  180px;
+    background: #fff;
+}
+.list-con .p-list-item .p-price-con{
+    height: 30px;
+}
+.list-con .p-list-item .p-price{
+    position: absolute;
+    height:30px;
+    left:0;
+    font-size: 25px;
+    color:#c60023;
+
+}
+.list-con .p-list-item .p-name-con{
+    height:40px;
+}
+.list-con .p-list-item .p-name{
+    position: absolute;
+    line-height: 20px;
+    bottom: 0px;
+    margin-bottom: 5px;
+    color:#666;
+    left:7px;
+}
+.list-con .p-list-item{
+    position: relative;
+    float:left;
+    margin: 0 20px 20px 0;
+    padding: 10px;
+    margin-right: 20px;
+    background: #fff;
 }

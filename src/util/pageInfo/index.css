@@ -1,0 +1,23 @@
+.page-con{
+    text-align: center;
+    color:#222;
+}
+.page-con .page-item{
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    background: #fff;
+    padding:0 15px;
+    height:36px;
+    line-height: 36px;
+    margin: 0 2px;
+}
+.page-con .page-item.disabled {
+    color:#666;
+    background: #ccc;
+    cursor: auto;
+}
+.page-con .page-item.active{
+    background: #c60023;
+    cursor: auto;
+}

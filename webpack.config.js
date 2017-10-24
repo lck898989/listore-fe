@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-22 21:24:01
+ * @Last Modified time: 2017-10-24 22:21:57
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -46,6 +46,7 @@ var config = {
 			'common'				: ['./src/page/common/index.js'],
 			'result'				: ['./src/page/result/index.js'],
 			'list'					: ['./src/page/list/index.js'],
+			'detail'				: ['./src/page/detail/index.js'],
 			
 	  },
 	  //输出文件路径
@@ -122,6 +123,7 @@ var config = {
 			   new HtmlWebpackPlugin(getHtmlConfig('user-center','个人中心')),
 			   new HtmlWebpackPlugin(getHtmlConfig('user-centerUpdate','修改个人信息')),
 			   new HtmlWebpackPlugin(getHtmlConfig('list','产品列表')),
+			   new HtmlWebpackPlugin(getHtmlConfig('productDetail','产品详情')),
 			   new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
       ]
 
