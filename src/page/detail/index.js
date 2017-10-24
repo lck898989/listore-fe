@@ -11,11 +11,20 @@ var page = {
                 this.bindEvent();
             },
             onLoad : function(){
+                //如果没有productId的话跳回到首页
+                if(!this.data.productId){
+                    _listore.goHome();
+                }
+                this.loadDetail();
 
             },
             bindEvent : function(){
 
-            }
+            },
+            loadDetail : function(){
+
+            },
+
 }
 $(function(){
     page.init();
