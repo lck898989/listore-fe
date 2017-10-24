@@ -1,0 +1,33 @@
+.nav{
+    background: #eee;
+    /*height 和 line-height保持相同的值的时候字体会在中间显示*/
+    height: 40px;
+    line-height: 40px;
+}
+/*用户部分*/
+.nav .user{ 
+    /*
+     用户信息靠左
+    */
+    float: left;
+    
+}
+/*登录状态不显示*/
+.nav .user.login{
+   display: none;
+   
+}
+/*
+与用户相关的连接
+*/
+.nav .user .link{
+    margin-right: 5px;
+}
+/*导航部分*/
+.nav .nav-list{
+    float:right;
+}
+.nav .nav-list .nav-item{
+    display: inline-block;
+    margin-right: 5px;
+}

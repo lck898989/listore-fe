@@ -1,0 +1,62 @@
+.crumb{
+    background: #eee;
+    height:50px;
+    line-height: 50px;
+    font-size: 14px;
+    color:#777;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-top: 2px solid #c60023;
+}
+.panel{
+    background: #fff;
+    margin-bottom: 10px;
+    padding:10px;
+}
+.panel .panel-title{
+    padding:10px;
+    font-size:14px;
+    color:#666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+    padding:10px;
+    overflow: hidden;
+}
+.form-line{
+    padding:10px;
+    margin-top: 5px;
+    height:30px;
+    line-height: 30px;
+    font-size:14px;
+}
+.form-line .label{
+    /*sapn默认是没有宽度的*/
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    background:#eee;
+    border:1px solid grey;
+}
+.form-line .input{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    outline: none;
+    border:1px solid grey;
+    padding:0 5px;
+}
+.item{
+    padding-right: 10px;
+}
+.userInfo{
+    text-align: center;
+}
+.btn-submit{
+    width:100px;
+    text-align: center;
+    margin:0 auto;
+}

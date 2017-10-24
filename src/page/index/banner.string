@@ -1,0 +1,35 @@
+<div class="banner">
+    <ul>
+        <li>
+             <a href="./list.html?categoryId=100021" target = "_blank">
+                 <img class="banner-img" src="../../images/banner/banner1.jpg"></img>
+             </a>
+        </li>
+        <li>
+             <a href="./list.html?categoryId=100030" target = "_blank">
+                 <img class="banner-img" src="../../images/banner/banner2.jpg"></img>
+             </a>
+        </li>
+        <li>
+             <a href="./list.html?categoryId=100016" target = "_blank">
+                 <img class="banner-img" src="../../images/banner/banner3.jpg"></img>
+             </a>
+        </li>
+        <li>
+             <a href="./list.html?categoryId=100001" target = "_blank">
+                 <img class="banner-img" src="../../images/banner/banner4.jpg"></img>
+             </a>
+        </li>
+        <li>
+             <a href="./list.html?categoryId=100021" target = "_blank">
+                 <img class="banner-img" src="../../images/banner/banner5.jpg"></img>
+             </a>
+        </li>
+    </ul>
+    <div class="arrow prev">
+        <i class="fa fa-chevron-left"></i>
+    </div>
+    <div class="arrow next">
+        <i class="fa fa-chevron-right"></i>
+    </div>   
+</div>

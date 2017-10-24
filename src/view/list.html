@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <%=require('html-loader!./layout/head-common.html')%>
+            <title><%= htmlWebpackPlugin.options.title%> -- listore电商平台结果返回页</title>
+    </head>
+     
+     <body>
+            <%=require('html-loader!./layout/nav.html')%>
+            <%=require('html-loader!./layout/header.html')%>
+          <div class="page-wrap">
+              <div class="w">
+                  <div class="sort-con">
+                      <!--
+                        如果为li标签的话可以添加属性data-type
+
+                      -->
+                      <div class="sort-item default-sort active">默认排序</div>
+                      <div class="sort-item price-sort">
+                          价格排序<i class="fa fa-sort-asc"></i>
+                                 <i class="fa fa-sort-desc"></i>
+                      </div>
+                  </div>
+                  <!--产品列表容器-->
+                  <div class="list-con">
+                        
+                  </div>
+                  <!--分页信息容器-->
+                  <div class="pageInformation-con">
+                        <div class="loading"></div>
+                  </div>
+              </div>
+          </div>
+          <%=require('html-loader!./layout/footer.html')%>
+    </body>
+</html>
