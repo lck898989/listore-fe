@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-24 22:21:57
+ * @Last Modified time: 2017-10-27 22:06:22
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -54,7 +54,7 @@ var config = {
 		      //存放文件的路径
 			  path:'./dist',
 			  //访问文件的路径
-			  publicPath:'/dist',
+			  publicPath:WEBPACK_ENV === 'online' ? '//s.listore.top/listore-fe/dist/' : '/dist',
       	    filename:'js/[name].js'
 	  },
       externals:{
