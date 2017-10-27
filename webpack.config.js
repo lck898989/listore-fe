@@ -2,7 +2,7 @@
 * @Author: HP
 * @Date:   2017-10-03 17:52:29
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2017-10-27 22:26:40
+ * @Last Modified time: 2017-10-27 22:32:34
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -53,7 +53,7 @@ var config = {
       output:{
 		      //存放文件的路径
 			  path:'./dist',
-			  //访问文件的路径
+			  //访问文件的路径 :如果实在线上部署的话加上验证就会打到source.listore.top/listore-fe文件夹下
 			  publicPath:WEBPACK_ENV === 'online' ? '//source.listore.top/listore-fe/dist/' : '/dist',
       	    filename:'js/[name].js'
 	  },
