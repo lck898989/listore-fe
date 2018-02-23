@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    ul{
+        float: right;
+    }
+    li{
+         list-style: none;
+         width: 70px;
+         display: inline-block;
+       
+         
+     }
+     a{
+         color:black;
+         font-style: normal;
+         font-weight: bold;
+     }
+     .more{
+        display:block;
+        width: 70px;
+        height: 40px;
+        background: blue;
+        color:#fff;
+        line-height: 40px;
+        text-align: center;
+        text-decoration: none;
+     }
+     .clear{
+         clear: both;
+     }
+     .img-con{
+         width: 250px;
+         height: 90px;
+         margin:0 auto;
+         margin-top: 10px;
+         margin-bottom: 10px;
+     }
+     /*
+     搜索框的样式
+     */
+     .search-con{
+         width: 1000px;
+         height: 50px;
+         /* background: red; */
+         margin: 0px auto;
+     }
+     
+     .inputbox{
+         
+         width: 400px;
+         height: 30px;
+         margin-left: 200px;
+         float:left;
+         outline: none;
+     }
+     .search{
+         
+         background: blue;
+         padding:6px;
+         margin-left: 0px;
+         color:#fff;
+         float: left;
+         border: 1px solid blue;
+         text-align: center;
+         width: 100px;
+         height: 20px;
+         line-height: 20px;
+     }
+     .bottom-con{
+         margin-top: 300px;
+         margin-left: 100px;
+     }
+     .first-item .erweima-con{
+         float:left;
+     }
+     .first-item .right-text{
+         float:left;
+         width: 125px;
+         height: 135px;
+     }
+     a{
+         text-decoration: none;
+     }
+     .camera{
+         display: block;
+         width: 30px;
+         height: 30px;
+         background: url("C:\\Users\\lck\\Pictures\\Camera Roll\\camera.jpg") no-repeat;
+         float: left;
+         margin-left: -143px;
+         margin-top: 8px;
+     }
+    </style>
+</head>
+    <body>
+        <!--实现百度页面的结构-->
+        <!--导航条内容-->
+        <div class="nav-con">
+            <ul class="nav-items">
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">hao123</a></li>
+                <li><a href="#">地图</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">贴吧</a></li>
+                <li><a href="#">学术</a></li>
+                <li><a href="#">设置</a></li>
+                <li><a class="more" href="#">更多产品</a></li>
+                
+            </ul>
+
+        </div>
+        <!--清除浮动-->
+        <div class="clear"></div>
+        <hr>
+        <!--百度logo-->
+        <div class="img-con">
+           <a href="#"><img src="C:\\Users\\lck\\Pictures\\Camera Roll\\百度.JPG"></a>
+        </div>
+        <!--搜索框容器-->
+        <div class="search-con">
+               <form class="form-con">
+                    <input class="inputbox" type="text" name="searchBox" maxlength="100" autocomplete="off">
+                    <a class="search" href="#">百度一下</a>
+                    <a class="camera" href="#"></a>
+               </form>         
+        </div>
+        <!--下部的链接文字-->
+        <div class="bottom-con">
+            <div class="first-item">
+                <div class="erweima-con">
+                    <img src="C:\\Users\\lck\\Pictures\\Camera Roll\\zling.JPG"></img>
+                </div>
+                <div class="right-text">
+                    <p>hello</p>
+                    <p>world</p>
+                </div>
+            </div>
+            <div class="second-item">
+                <div class="erweima-con2">
+                        <img src="C:\\Users\\lck\\Pictures\\Camera Roll\\zling.JPG"></img>
+                </div>
+                <div class="right-text2">
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="third-item">
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,3 +1,8 @@
+/*
+html元素选择的优先级
+1：id > class > 元素 > 通配符
+2：div默认是没有宽和高的需要我们手动添加上去
+*/
 .page-con{
     text-align: center;
     color:#222;

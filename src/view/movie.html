@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        /*
+        消除浏览器自带的样式
+        */
+        *{margin: 0px;padding: 0px;}
+         .movieImage{
+            float: left;
+            width: 450px;
+            height: 450px;
+         }
+         .list-con{
+             float: left;
+         }
+         .clear{
+             clear: both ;width: 0px; height: 0xp;
+         }
+         .father{
+             width: 500px;
+             height: 500px;
+             position: relative;
+             background: red;
+         }
+         .son{
+             width: 100px;
+             height: 100px;
+             position: absolute;
+             top:100px;
+             left: 100px;
+             background: blue;
+         }
+         ul li{
+             display: inline-block;
+             width: 200px;
+             height: 200px;
+             background: violet;
+             position: relative;
+         }
+         .ullist .list-item .icon-item{
+             position:absolute;
+             left: 40px;
+             top:-50px;
+         }
+    </style>
+</head>
+
+    <body>
+        <h2><a href="#">电影捉放曹</a></h2>
+        <div class="movieImage">
+            <a><img src="http://www.w3school.com.cn/i/eg_tulip.jpg"></a>
+        </div>
+        <div class="list-con">
+            <h1>sdfad</h1>
+            <p>演员：as</p>
+            <p>导演：阿萨德</p>
+            <p>时长：2:20:10</p>
+        </div>
+        <!--清除浮动-->
+        <div class="clear">
+
+        </div>
+        <div class="commen">
+            <h3>asdfsadfasdf</h3>
+        </div>
+        <!-- <div class="father">
+            <p class="son">
+         
+
+            </p>
+        </div> -->
+        <ul class="ullist">
+            <li class="list-item">
+                <div class="icon-item">
+                    <img src="C:\\Users\\lck\\Pictures\\Camera Roll\\cat.jpg">
+                </div>
+                <p>ads</p>
+            </li>
+            <li class="list-item">
+                <div class="icon-item">
+                        <img src="C:\\Users\\lck\\Pictures\\Camera Roll\\cat.jpg">
+                </div>
+                <p>ads</p>
+            </li>
+            <li class="list-item">
+                <div class="icon-item">
+                        <img src="C:\\Users\\lck\\Pictures\\Camera Roll\\cat.jpg">
+                </div>
+                <p>ads</p>
+            </li>
+            <li class="list-item">
+                <div class="icon-item">
+                        <img src="C:\\Users\\lck\\Pictures\\Camera Roll\\cat.jpg">
+                </div>
+                <p>ads</p>
+            </li>
+        </ul>
+    </body>
+</html>

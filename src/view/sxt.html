@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        /*
+        margin外边距特点：
+        设置元素外边距的时候要注意这几个特点
+        1：块级元素的垂直相邻外边距会合并
+        2：而行内元素实际上不占上下外边距，行内元素的左右外边距不合并
+        3：浮动元素的外边距也不会合并
+        4：允许制定负的外边距值，不过使用时要小心
+        
+        */
+        /* 
+        div 实现的效果
+        .content{
+            display: block;
+            text-align: center;
+        }
+        .text{
+            color:black;
+            text-decoration: none;
+        }
+        .box{
+            width: 400px;
+            height: 300px;
+            float: left;
+            margin-left: 50px;
+            margin-right: 50px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        
+        .img-con{
+            float:left;
+        }
+        .img-a{
+            display: block;
+            background-image: url("C:\\Users\\lck\\Pictures\\Camera Roll\\捕获1.jpg");
+            background-repeat: no-repeat;
+            background-size: 200px 200px;
+            width: 200px;
+            height: 200px;
+        }
+        .clear{
+            clear: both;
+        }
+        .first-layer{
+            /*
+            块元素居中显示
+            
+            margin: 0px auto;
+            width:100%;
+            height: 600px;
+            float: left;
+            border:red solid 1px;
+        }  */
+        /*
+          ul 实现的效果
+        */
+        li{
+            list-style: none;
+            /*
+            设置背景图的上下距离
+            */
+            background: url("C:\\Users\\lck\\Pictures\\Camera Roll\\捕获1.jpg") no-repeat 0 70px;
+           
+            padding-left: 80px;
+            padding-top:30px; 
+            
+            border-right:grey solid 1px;
+            border-bottom: grey solid 1px;
+            width: 400px;
+            height: 180px;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            width: 300px;
+           
+        }
+        ul{
+            float: left;
+        }
+        .con{
+            margin: 0 auto;
+            width: 1200px;
+            height: 800px;
+            border: red solid 1px;
+            text-align: center;
+        }
+    </style>
+</head>
+    <body>
+        <!--
+            div实现的效果下面展示ul展示的结果
+        -->
+        <!-- <div class="content">
+            <a  class="text" href="#"><h1>关于我们</h1></a>
+        </div>
+        <div class="first-layer">
+                <div class="box">
+                        <div class="img-con">
+                            <a class="img-a"></a>
+                        </div>
+                        <div class="text-con">
+                            <p><h2>adafa</h3></p>
+                            <p>asdfasdf阿斯蒂芬卡士大夫</p>
+                            <p>阿斯顿发山东if阿萨德佛</p>
+                        </div>
+                    </div>  
+                    <div class="box">
+                            <div class="img-con">
+                                <a class="img-a"></a>
+                            </div>
+                            <div class="text-con">
+                                <p><h2>adafa</h3></p>
+                                <p>asdfasdf阿斯蒂芬卡士大夫</p>
+                                <p>阿斯顿发山东if阿萨德佛</p>
+                            </div>
+                    </div>
+                    <div clear="clear"></div>    
+         <div class="box">
+                <div class="img-con">
+                    <a class="img-a"></a>
+                </div>
+                <div class="text-con">
+                    <p><h2>adafa</h3></p>
+                    <p>asdfasdf阿斯蒂芬卡士大夫</p>
+                    <p>阿斯顿发山东if阿萨德佛</p>
+                </div>
+            </div>  
+            <div class="box">
+                    <div class="img-con">
+                        <a class="img-a"></a>
+                    </div>
+                    <div class="text-con">
+                        <p><h2>adafa</h3></p>
+                        <p>asdfasdf阿斯蒂芬卡士大夫</p>
+                        <p>阿斯顿发山东if阿萨德佛</p>
+                    </div>
+             </div>          
+        </div> -->
+        <h1>关于我们</h1>
+        <div class="con">
+            <ul>
+                <li>
+                    <h3>预约方便</h3>
+                    <p>阿斯顿发斯蒂芬阿斯顿发斯蒂芬，拉伸到付款来对付按理说地方阿萨德佛爱上对方</p>
+                </li>
+                <li>
+                        <h3>预约方便</h3>
+                        <p>阿斯顿发斯蒂芬阿斯顿发斯蒂芬，拉伸到付款来对付按理说地方阿萨德佛爱上对方</p>
+                </li>
+            </ul>
+            <ul>
+                    <li>
+                        <h3>预约方便</h3>
+                        <p>阿斯顿发斯蒂芬阿斯顿发斯蒂芬，拉伸到付款来对付按理说地方阿萨德佛爱上对方</p>
+                    </li>
+                    <li>
+                            <h3>预约方便</h3>
+                            <p>阿斯顿发斯蒂芬阿斯顿发斯蒂芬，拉伸到付款来对付按理说地方阿萨德佛爱上对方</p>
+                    </li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+       .navCol .tag.selected{
+         line-height: 38px;
+         float: left;
+         margin: 7px;
+         padding: 5px;
+         list-style: none;
+         border:1px solid red;
+         background-color: red;
+         color:white;
+       }
+       .navCol .tag{
+           /*
+           inline-block 是行内块元素要想使其能够鼠标悬浮状态下改变颜色需要设置该项
+           
+           */
+         /* display: inline-block; */
+         display:inline-block;
+         line-height: 38px;
+         height: 38px;
+         margin: 5px 5px;
+         padding: 5px;
+       }
+       p{
+           white-space: nowrap;/*文本过长的话超出浏览器显示一行的范围不换行显示*/
+           text-overflow: ellipsis;   /*当文本超出浏览器显示的范围就在文字后面加上省略号*/
+           overflow: hidden;
+       }
+       .text{
+        position:absolute;
+        padding-top: 60px;
+       }
+       .navCol .tag:hover{
+           background: red;
+           color: rgb(167, 173, 131);
+           
+       }
+       .navCol .tags:active{
+           color:green;
+       }
+       /*
+        伪元素定义
+       
+       */
+       ul::before{
+           content: "ul伪元素";
+           color:red;
+       }
+       .floata{
+           float: left;
+           background: red;
+           width: 500px;
+           height: 500px;
+       }
+       .floatb{
+           float: left;
+           background: blue;
+           width: 500px;
+           height: 500px;
+       }
+       .c{
+           width: 1000px;
+           height: 1000px;
+           background: green;
+       }
+       .clear{
+           /*
+           清除浮动
+           */
+           /* clear: both; */
+
+       }
+    </style>
+</head>
+    <body>
+        <div class = "navCol">
+            <ul class="ul">
+                <li class="tag selected">
+                     <a>首页</a>
+                </li>
+                <li class="tag">
+                    <a>服饰</a>
+               </li>
+               <li class="tag">
+                <a>数码家电</a>
+               </li>
+               <li class="tag">
+                <a>化妆品</a>
+               </li>
+               <li class="tag">
+                  <a>母婴用品</a>
+               </li>
+               <li class="tag slected">
+                  <a>鞋帽</a>
+               </li>
+            </ul>
+        </div>
+        
+        <div class="floata"></div>
+        <div class="floatb"></div>
+        <div class="c"></div>
+        <!-- 清除浮动-->
+        <div class="clear">
+
+        </div>
+        
+
+        
+    </body>
+</html>

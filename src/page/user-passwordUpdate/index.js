@@ -18,7 +18,6 @@ var page = {
         var _this = this;
         //事件冒泡,on事件代理任何点击都会冒泡到document对象上委托document进行处理
         $(document).on('click','.btn-submit',function(){
-            
             //收集用户信息
             var passwordInfo = {
                 passwordOld        : $.trim($('#oldPass').val()),

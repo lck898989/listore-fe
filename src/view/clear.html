@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+         .box::after{
+             /*
+             伪元素设置为块元素才能清除浮动
+             */
+             display: block;
+             clear: both;
+             
+             content: "";
+         }
+         .l,.r{
+             width: 200px;
+             height: 200px;
+             float: left;
+         }
+         .l{
+             background: red;
+
+         }
+         .r{
+             background: blue;
+             
+         }
+         .d{
+             width: 400px;
+             height: 400px;
+             background:green;
+         }
+         
+    </style>
+</head>
+    <body>
+        <!--
+            清除浮动的overflow方式
+            <div class="box">
+            <div class="l"></div>
+            <div class="r"></div>
+        </div>        
+        <div class="d">
+
+        </div> -->
+        <!--
+            清除浮动的第二种方式伪元素清除浮动
+        -->
+        <div class="box">
+            <div class="l">
+
+            </div>
+            <div class="r">
+
+            </div>
+        </div>
+        <div class="d">
+
+        </div>
+    </body>
+</html>

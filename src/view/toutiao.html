@@ -1,0 +1,357 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+     *{
+         margin: 0px;
+         padding: 0px;
+     }
+     a{
+         text-decoration: none;
+     }
+     .main-nav{
+         width: 100%;
+         height: 30px;
+         line-height: 30px;
+         background: #c60023;
+         margin-bottom: 20px;
+     }
+     .main-nav .lists{
+         list-style: none;
+         float: right;
+     }
+     .downloadapp{
+         float: left;
+         margin-left: 10px;
+     }
+     .main-nav .lists li{
+         float:left;
+         padding:0px 20px;
+         border-right: 1px dotted grey;
+
+     }
+     .main-nav a{
+        color:#fff;
+        text-decoration: none;
+     }
+     .main-nav .lists .weather em{
+         font-style: normal;
+         margin-left: 5px;
+     } 
+     
+     .temperature-up,.temperature-down{
+         position: relative;
+     }
+     .temperature-up::after{
+        content: "。";
+        position:absolute;
+        top:-15px;
+        right: -50px;
+     }
+     .temperature-down::after{
+         content:"。";
+         position:absolute;
+         top:-15px;
+         right: 20px;
+
+     }
+     /*
+     
+     导航搜索部分
+     */
+     .search-con{
+        width: 1060px;
+        height: 60px;
+        margin: 0px auto; 
+     
+        border-bottom: 1px solid #ddd;
+     }
+     .img-con{
+         
+         margin-left: 100px;
+         float: left;
+         
+     }
+     .form-con{
+         float:left;
+         margin: 0 auto;
+         width: 550px;
+         height: 40px;
+     }
+     .input-text{
+         margin-left: 100px;
+         margin-top: 8px;
+         height: 40px;
+         width: 400px;
+         outline: none;
+         text-indent: 20px;
+     }
+     .f1{
+         position: relative;
+     }
+     .f1 .search-icon{
+         display: block;
+         position: absolute;
+         width: 30px;
+         height: 30px;
+         top:17px;
+         right: 50px;
+         background: url("C:\\Users\\lck\\Pictures\\Camera Roll\\search.jpg") no-repeat 0px 0px;
+     }
+     .search{
+         display: block;
+         float: right;
+         border: 1px solid #c60023;
+         padding:10px;
+         text-align: center;
+         background: #c60023;
+         margin-top: 8px;
+         width: 50px;
+         height: 18px;
+         margin-right: -22px;
+         line-height: 18px;
+         text-decoration: none;
+         color:#fff;
+         
+     }
+     /*
+     中间内容区域
+     */
+     .center-wrap{
+         width: 1300px;
+         height: 1000px;
+         /* border: 1px solid #c60023; */
+         margin: 0 auto;
+     }
+     .left-list{
+         width: 150px;
+         height: 1000px;
+         /* border:1px solid #c60023; */
+         float:left;
+         overflow: hidden;
+     }
+     .main-text{
+         width: 800px;
+         height: 1000px;
+         /* border:1px solid #c60023; */
+         float:left;
+     }
+     .right{
+         float:left;
+     }
+     .center-wrap .left-list .left-nav.selected{
+         font-size:16px;
+         padding:20px;
+         border:1px solid #c60023;
+         margin-top: 10px;
+         height: 20px;
+         line-height: 20px;
+         text-align: center;
+         background:#c60023;
+         color: #fff;
+         border-radius: 5px;
+     }
+     .center-wrap .left-list .left-nav:hover{
+         background: #c60023;
+         border-radius: 5px;
+     }
+     .center-wrap .left-list .left-nav{
+         font-size:16px;
+         padding:20px;
+         margin-top: 10px;
+         height: 20px;
+         line-height: 20px;
+         text-align: center;
+         color: black;
+         display: list-item;
+     }
+     .center-wrap .left-list .left-nav a{
+         /* color: black;
+         display: block;
+         width: 150px;
+         float: left;
+         text-decoration: none;
+         transition: .3s;
+         margin: 0 auto; */
+         text-decoration: none;
+         color: black;
+     }
+     .center-wrap .left-list .left-nav a:hover{
+         color:#fff;
+         
+         
+     }
+     /* .center-wrap .left-list .left-nav a:hover{
+         color:#fff;
+     } */
+     .center-wrap .left-list .lists{
+         list-style: none;
+     }
+     .clear{
+         clear: both;
+     }
+     /*
+     中间区域
+     */
+     .top{
+         margin-left: 50px;
+     }
+     .new-info{
+         color:#fff;
+         background: #c60023;
+         border: 1px solid #c60023;
+         height: 30px;
+         width: 150px;
+         line-height: 30px;
+         text-align: center;
+         border-radius: 6px;
+         margin-left: 250px;
+         margin-top: 10px;
+     }
+     .new-info a{
+         color:#ddd;
+         text-decoration: none;
+         transition: .4s;
+     }
+     .new-info a:hover{
+         color:#fff;
+     }
+     .btm-img{
+         background: url("C:\\Users\\lck\\Pictures\\Camera Roll\\layer1.jpg") no-repeat left center;
+         float: left;
+         width: 150px;
+         height: 100px;
+         margin-left: 30px;
+         margin-top: 30px;
+     }
+     .btm-right-text{
+         float: right;
+         width: 600px;
+         height: 100px;
+         margin-top: 30px;
+     }
+     .text-title{
+         margin-bottom: 10px;
+     }
+     .text-title a{
+         color:black;
+         text-decoration: none;
+     }
+     .text-comment{
+         margin-top: 20px;
+     }
+     .bottom-text{
+         margin-bottom: 20px;
+     }
+     .text-top:hover{
+        color:blueviolet;
+     }
+    </style>
+</head>
+    <body>
+        <!--导航部分-->
+         <nav>
+             <!--主导航-->
+             <div class="main-nav">
+                 <a href="#" class="downloadapp">下载APP</a>
+                 <ul class="lists">
+                    <li class="weather-list">
+                        <a class="weather">
+                            <span class="city">北京</span>
+                            <em class="weather-comment">阴</em>
+                            <em class="temperature-up">-6</em>  ~
+                            <em class="temperature-down">3</em>
+                            
+                        </a>
+                    </li>
+                    <li class="about-tt">
+                         <a href="#">反馈</a>
+                    </li>
+                    <li class="about-tt">
+                            <a href="#">图片</a>
+                    </li>
+                    <li class="more">
+                            <a href="#">更多产品</a>
+                    </li>
+
+                 </ul>
+             </div>
+             <!--搜索导航-->
+             <div class="search-con">
+                <a href="#" class="img-con"><img src="C:\\Users\\lck\\Pictures\\Camera Roll\\jrttlogo.png"></a>
+                <div class="form-con">
+                        <form class="f1">
+                                <input type="search" class="input-text" name="searchText" placeholder="大家都在搜：冰花男孩看升旗">
+                                <a class="search-icon" href="#"></a>
+                                <a class="search" href="#">搜索</a>
+                        </form>
+                </div>
+                
+             </div>
+         </nav>
+         <!--中间大的内容区域-->
+         <div class="center-wrap">
+             <div class="left-list">
+                <ul class="lists">
+                        <li class="left-nav selected"><a href="#">推荐</a></li>
+                        <li class="left-nav"><a href="#">热点</a></li>
+                        <li class="left-nav"><a href="#">西瓜视频</a></li>
+                        <li class="left-nav"><a href="#">图片</a></li>
+                        <li class="left-nav"><a href="#">科技</a></li>
+                        <li class="left-nav"><a href="#">娱乐</a></li>
+                        <li class="left-nav"><a href="#">游戏</a></li>
+                        <li class="left-nav"><a href="#">体育</a></li>
+                        <li class="left-nav"><a href="#">汽车</a></li>
+                        <li class="left-nav"><a href="#">财经</a></li>
+                        <li class="left-nav"><a href="#">搞笑</a></li>
+                        <li class="left-nav left-more"><a href="#">更多...</a></li>
+                </ul>
+               
+             </div>
+             <!-- <div class="clear"></div> -->
+             <div class="main-text">
+                 <!--轮播图区域-->
+                 <div class="top">
+                     <div class="new-info">
+                       <a class="" href="#">点击查看更多</a>
+                     </div>
+                 </div>
+                 <div class="clear"></div>
+                 <div class="bottom-text">
+                    <div class="btm-img"></div>
+                    <div class="btm-right-text">
+                            <div class="text-title">
+                                <h2><a href="#" class="text-top">美官员称当年支持中国加入世贸组织是错误的，中方回应</a></h2>
+                            </div>
+                            <div class="text-comment">
+                                <em>时政</em>
+                                <i>海外网.8857评论.1小时前</i>
+                            </div>
+                    </div>
+                </div>
+                <div class="bottom-text">
+                        <div class="btm-img"></div>
+                        <div class="btm-right-text">
+                                <div class="text-title">
+                                    <h2><a href="#" class="text-top">美官员称当年支持中国加入世贸组织是错误的，中方回应</a></h2>
+                                </div>
+                                <div class="text-comment">
+                                    <em>时政</em>
+                                    <i>海外网.8857评论.1小时前</i>
+                                </div>
+                        </div>
+                    </div>
+
+             </div>
+             <div class="right">
+
+             </div>
+         </div>
+    </body>
+</html>

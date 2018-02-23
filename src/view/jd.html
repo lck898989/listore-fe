@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script>
+        
+        </script>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            div{
+                width: 700px;
+                height: 500px;
+                background: url("https://img11.360buyimg.com/da/jfs/t15262/54/1761148421/85305/c875d86f/5a56ccfeNcbaaa544.jpg");
+                position: relative;
+            }
+            /*
+            两个标签复用相同内容
+            */
+            div:hover::before,div:hover::after{
+                content: "<";
+                display: block;
+                position: absolute;
+                top: 200px;
+                left:0px;
+                height: 50px;
+                width: 30px;
+                font-size: 30px;
+                background: red;
+                text-align: center;
+                line-height: 50px;
+                cursor: pointer;
+                opacity: .5;
+                color: #fff;
+            }
+            div:hover::after{
+            
+                left: 670px;
+                content:">";
+            }
+            ul{
+                position:absolute;
+                bottom: 10px;
+                left:300px;
+            }
+            ul li{
+                list-style: none;
+                float:left;
+                margin-right: 10px;
+
+            }
+            ul li a{
+                /*
+                   a 是行内元素对其设置高度和宽度是无效的只有将其设置为块级元素才可以
+                   块级元素是占据一行的一个矩形，所以可以设置宽和高
+                   行内元素是寄生在块级元素内的是无法对其设置宽和高的
+                */
+                display: block;
+                text-decoration: none;
+                height: 20px;
+                width: 20px;
+                background:grey;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 20px;
+                opacity: .5;
+            }
+            ul li a:hover{
+                background: #c60023;
+                color: #fff;
+                opacity: 1;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
+        
+    </body>
+</html>

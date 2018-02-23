@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+         .music{
+             width: 100px;
+             height: 100px;
+             background: #c60023;
+         }
+         @keyframes mya{
+             from{
+                 transform: rotate(0deg);
+             }
+             to{
+                 transform: rotate(360deg);
+             }
+         }
+         .music:hover{
+              animation: mya 3s linear infinite;
+         }
+         /*
+         
+         css绘画三角形图形
+         */
+         .draw{
+             width: 0px;
+             height: 0px;
+             border-right: 10px solid red;
+             border-left: 10px solid #c60023;
+             border-top: 10px solid transparent;
+             border-bottom: 10px solid transparent;
+         }
+         .send{
+             width: 300px;
+             height: 100px;
+             position: relative;
+         }
+         .arrow{
+             width: 0px;
+             height: 0px;
+             border-right: 10px solid green;
+             border-top: 10px solid transparent;
+             border-bottom: 10px solid transparent;
+             border-radius: 5px;
+             float: left;
+             position: absolute;
+             top:6px;
+             left: 0px;
+         }
+         .rec{
+             width: 200px;
+             height: 35px;
+             background: green;
+             float: left;
+             position: absolute;
+             top: 0px;
+             left:9px;
+         }
+         .wechat{
+             width: 200px;
+             height: 100px;
+             position: relative;
+         }
+         .rect{
+             width: 200px;
+             height: 35px;
+             background: violet;
+             position: absolute;
+             top:0px;
+             left:9px;
+         }
+         .rect::before{
+             position: absolute;
+             content: "";
+             display: inline-block;
+             width: 0px;
+             height: 0px;
+             border-right: 10px solid violet;
+             border-top: 10px solid transparent;
+             border-bottom: 10px solid transparent;
+             top:6px;
+             left: -10px;
+         }
+         
+    </style>
+</head>
+    <body>
+          <div class="music">
+                <h1>heeisdfasdf</h1>
+          </div>        
+          <div class="draw">
+            
+          </div>
+          <div class="send">
+            <div class="arrow">
+
+            </div>
+            <div class="rec"></div>
+          </div>
+          <div class="wechat">
+             <div class="rect">
+
+             </div>
+          </div>
+    </body>
+</html>

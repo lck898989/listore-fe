@@ -1,0 +1,69 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/animate.css" />
+    <script src="main.js"></script>
+    <style>
+          *{
+              margin: 0px;
+              padding: 0px;
+          }
+          ul{
+              list-style: none;
+          }
+          .icon-con i{
+            display: block;
+            width: 25px;
+            height: 35px;
+            float: left;
+            background: url("C:\\Users\\lck\\Pictures\\Camera Roll\\camera.jpg") no-repeat 2px 12px;
+            margin-right: 50px;
+          }
+          .list-item{
+              background: grey;
+              width: 150px;
+              height: 50px;
+          }
+          .slide-con{
+              display: none;
+              transition: 2s;
+          }
+          .list-item:hover .slide-con{
+              display: block;
+              width: 700px;
+              height: 300px;
+              background: violet;
+              position:absolute;
+              left: 150px;
+              top:0px;
+          }
+          .lists{
+              position: relative;
+          }
+          
+    </style>
+</head>
+    <body>
+        <ul class="lists">
+            <li class="list-item">
+                <div class="icon-con">
+                    <i class="img"></i>
+                </div>
+                <div class="text-con">
+                    <p class="text"><a href="#">asdf</a></p>
+                    <p class="text"><a href="#">adsf</a></p>
+                </div>
+                <div class="slide-con">
+                    <p class="slide-text">sadfasfdasdfasf</p>
+                </div>
+                <div class="text-icon">
+                    <p class="animated rollIn">Python 和 radis</p>
+                </div>
+            </li>
+        </ul>        
+    </body>
+</html>
