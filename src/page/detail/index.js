@@ -63,8 +63,9 @@ var page = {
     loadDetail : function(){
         var _this       = this,
             html        = '',
+            //获取到div容器信息
             $pageWrap   = $('.page-wrap');
-            console.log($pageWrap);
+            console.log("pageWrap is " + $pageWrap);
         // loading
         $pageWrap.html('<div class="loading"></div>');
         // 请求detail信息
