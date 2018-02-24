@@ -9,5 +9,15 @@ var _product = {
             error       : reject
         });
     },
+    getProductDetail : function(productId,resolve,reject){
+        _listore.request({
+            url          : _listore.getServerUrl('/product/productDetail'),
+            data         : productId,
+            success      : resolve,
+            error        : reject
+        })
+       
+
+    }
 }
 module.exports = _product;
