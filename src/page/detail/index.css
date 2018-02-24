@@ -2,6 +2,9 @@
 .intro-wrap{
     overflow: hidden;
 }
+.page-wrap{
+    height: 800px;
+}
 .intro-wrap .p-img-con{
     float: left;
     width: 420px;
