@@ -123,7 +123,7 @@ var config = {
 			   new HtmlWebpackPlugin(getHtmlConfig('user-center','个人中心')),
 			   new HtmlWebpackPlugin(getHtmlConfig('user-centerUpdate','修改个人信息')),
 			   new HtmlWebpackPlugin(getHtmlConfig('list','产品列表')),
-			   new HtmlWebpackPlugin(getHtmlConfig('productDetail','产品详情')),
+			   new HtmlWebpackPlugin(getHtmlConfig('detail','产品详情')),
 			   new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
       ]
 
