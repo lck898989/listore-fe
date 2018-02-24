@@ -35,7 +35,7 @@ var page = {
             var type        = $(this).hasClass('plus') ? 'plus' : 'minus',
                 $pCount     = $('.p-count'),
                 //将输入框中的数字内容取出来
-                currCount   = parseInt($pCount.val()),
+                currCount = parseInt($pCount.val()),
                 //商品数量最小值
                 minCount    = 1,
                 //商品数量的最大值
@@ -64,6 +64,7 @@ var page = {
         var _this       = this,
             html        = '',
             $pageWrap   = $('.page-wrap');
+            console.log($pageWrap);
         // loading
         $pageWrap.html('<div class="loading"></div>');
         // 请求detail信息
