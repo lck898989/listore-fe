@@ -25,6 +25,16 @@
                  <img class="banner-img" src="../../images/banner/banner5.jpg"></img>
              </a>
         </li>
+         <li>
+             <a href="./list.html?categoryId=100021" target = "_blank">
+                 <img class="banner-img" src="../../images/banner/banner6.jpg"></img>
+             </a>
+        </li>
+         <li>
+             <a href="./list.html?categoryId=100021" target = "_blank">
+                 <img class="banner-img" src="../../images/banner/banner7.jpg"></img>
+             </a>
+        </li>
     </ul>
     <div class="arrow prev">
         <i class="fa fa-chevron-left"></i>
