@@ -12,7 +12,9 @@ var _product = {
     getProductDetail : function(productId,resolve,reject){
         _listore.request({
             url          : _listore.getServerUrl('/product/productDetail'),
-            data         : productId,
+            data         : {
+              productId:productId
+            },
             success      : resolve,
             error        : reject
         })
