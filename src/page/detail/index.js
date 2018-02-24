@@ -3,7 +3,7 @@
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
-var _listore             = require('util/listore.js');
+var _listore        = require('util/listore.js');
 var _product        = require('service/productService.js');
 var _cart           = require('service/cartService.js');
 var templateIndex   = require('./index.string');
@@ -22,6 +22,7 @@ var page = {
             _listore.goHome();
         }
         this.loadDetail();
+        alert("onLoad method is running")
     },
     bindEvent : function(){
         var _this = this;
@@ -61,6 +62,7 @@ var page = {
     },
     // 加载商品详情的数据
     loadDetail : function(){
+        alert("enter the method loadDetail")
         var _this       = this,
             html        = '',
             //获取到div容器信息
